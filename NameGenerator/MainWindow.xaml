@@ -42,9 +42,9 @@
 
         <Button Grid.Row="2" Click="Generate_Click">Get Names</Button>
         
-        <HeaderedContentControl Grid.Row="3" Header="Your names:">
+        <!--<HeaderedContentControl Grid.Row="3" Header="Your names:" VerticalAlignment="Stretch">-->
             <ListView ItemsSource="{Binding Generated}"/>
-        </HeaderedContentControl>
+        <!--</HeaderedContentControl>-->
 
 
     </Grid>
