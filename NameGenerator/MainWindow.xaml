@@ -6,29 +6,46 @@
         xmlns:local="clr-namespace:NameGenerator"
         mc:Ignorable="d"
         Title="MainWindow" Height="700" Width="525">
-    <StackPanel Orientation="Vertical">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <!--<RowDefinition Height="*"/>-->
+        </Grid.RowDefinitions>
 
-        <StackPanel Orientation="Horizontal">
-            <TextBlock Text="How many?"/>
-            <TextBox Text="{Binding OutputCount}"/>
+        <StackPanel Grid.Row="0" Orientation="Vertical">
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Text="How many?"/>
+                <TextBox Text="{Binding OutputCount}"/>
+            </StackPanel>
+
+            <ComboBox ItemsSource="{Binding Genders}" SelectedValue="{Binding ChosenGender}"/>
+
+            <ComboBox ItemsSource="{Binding NameTypes}" SelectedValue="{Binding ChosenNameType}"/>
+
+
         </StackPanel>
-        
-        <HeaderedContentControl Header="Name Origins:">
-            <ListBox ItemsSource="{Binding Origins}">
-                <ListBox.ItemTemplate>
-                    <DataTemplate>
-                        <CheckBox Content="{Binding DisplayName}" IsChecked="{Binding IsChecked}"/>
-                    </DataTemplate>
-                </ListBox.ItemTemplate>
-            </ListBox>
+        <HeaderedContentControl Grid.Row="1" Header="Name Origins:">
+            <ScrollViewer>
+                <ListBox ItemsSource="{Binding Places}" >
+                    <ListBox.ItemTemplate>
+                        <DataTemplate>
+                            <CheckBox Content="{Binding PlaceName}" IsChecked="{Binding IsChecked}"/>
+                        </DataTemplate>
+                    </ListBox.ItemTemplate>
+                </ListBox>
+            </ScrollViewer>
         </HeaderedContentControl>
         
 
-        <Button Click="Generate_Click">Get Names</Button>
-        <HeaderedContentControl Header="Your names:">
-            <ListBox ItemsSource="{Binding Generated}"/>
+        <Button Grid.Row="2" Click="Generate_Click">Get Names</Button>
+        
+        <HeaderedContentControl Grid.Row="3" Header="Your names:">
+            <ListView ItemsSource="{Binding Generated}"/>
         </HeaderedContentControl>
 
 
-    </StackPanel>
+    </Grid>
 </Window>

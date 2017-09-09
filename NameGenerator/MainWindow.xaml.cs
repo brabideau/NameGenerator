@@ -23,10 +23,21 @@ namespace NameGenerator
     /// </summary>
     public partial class MainWindow : Window, INotifyPropertyChanged
     {
+        public enum Gender { Male, Female, Either }
+
+        public enum NameType { Given, Surname, Both }
         private HttpClient _client;
-        public List<string> Names { get; set; }
+
+        public List<Gender> Genders { get; set; }
+        public List<NameType> NameTypes { get; set; }
+
+        public Gender ChosenGender { get; set; }
+        public NameType ChosenNameType { get; set; }
+
+        private List<string> SourceNames { get; set; }
         public List<string> Generated { get; set; }
-        public List<Origins> Origins { get; set; }
+        //public List<Origin> Origins { get; set; }
+        public List<NameOrigin> Places { get; set; }
         public int Order { get; set; }
         public int OutputCount { get; set; }
 
@@ -35,76 +46,169 @@ namespace NameGenerator
             InitializeComponent();
             DataContext = this;
 
-            Order = 2;
-            OutputCount = 10;
+            Order = 3;
+            OutputCount = 20;
 
-
-            Names = new List<string>();
+            SourceNames = new List<string>();
             Generated = new List<string>();
-            Origins = new List<Origins>();
+            Places = new List<NameOrigin>();
+
+            Genders = Enum.GetValues(typeof(Gender)).Cast<Gender>().ToList();
+            NameTypes = Enum.GetValues(typeof(NameType)).Cast<NameType>().ToList();
+
+            ChosenGender = Genders[0];
+            ChosenNameType = NameTypes[0];
 
             _client = new HttpClient();
             _client.BaseAddress = new Uri("https://en.wikipedia.org/w/api.php");
 
-            FillOrigins();
+            FillPlaces();
         }
 
 
         private void Generate_Click(object sender, RoutedEventArgs e)
         {
-            string CategoryName = "Surnames_of_French_origin";
+            //string sources = "Swedish-language_surnames";
 
-            string query = "?cmtitle=Category:" + CategoryName + "&action=query&list=categorymembers&cmlimit=500&cmprop=title%7Csortkey%7Ctimestamp&format=json";
+            string sources = string.Join("|", Places.Where(p => p.IsChecked).Select(p => p.Surnames));          
+
+            string query = String.Format("??action=query&generator=categorymembers&gcmlimit=500&format=json&gcmtitle=Category:{0}", sources);
 
             HttpResponseMessage response = _client.GetAsync(query).Result;
 
-            var rawlist = JsonConvert.DeserializeObject<dynamic>(response.Content.ReadAsStringAsync().Result)["query"]["categorymembers"];
+            var result = JsonConvert.DeserializeObject<dynamic>(response.Content.ReadAsStringAsync().Result);
 
-            foreach (var name in rawlist)
+            while (result["continue"] != null)
             {
-                if ((int)name["ns"] == 0)
+                string continuequery = string.Format(query + "&gcmcontinue= {0}", result["continue"]["gcmcontinue"]);
+                var rawlist = result["query"]["categorymembers"];
+
+                foreach (var name in rawlist)
                 {
-                    Names.Add((((string)name["title"]).Split('(')[0]).Trim());
+                    if ((int)name["ns"] == 0)
+                    {
+                        SourceNames.Add((((string)name["title"]).Split('(')[0]).Trim());
+                    }
                 }
             }
+           
 
+            SourceNames.RemoveAll(n => n.ToUpper().Contains("LIST OF"));
+            SourceNames.RemoveAll(n => n.ToUpper().Contains("SURNAME"));
+            SourceNames.RemoveAll(n => n.ToUpper().Contains("FAMILY"));
+            SourceNames.RemoveAll(n => n.ToUpper().Contains("FAMILIES"));
+            SourceNames.RemoveAll(n => n.ToUpper().Contains(" NAME"));
+            SourceNames.RemoveAll(n => n.ToUpper().Contains("CUSTOMS"));
+            SourceNames.RemoveAll(n => n.ToUpper().Contains("DYNASTIES"));
+            SourceNames.RemoveAll(n => n.ToUpper().Contains(" AND "));
+            SourceNames.RemoveAll(n => n.ToUpper().Contains("CLAN"));
+
+            Generate();
+            RaisePropertyChanged("Generated");
         }
 
 
-        private void FillOrigins()
+        private void FillPlaces()
         {
-            Origins.Add(new Origins("German", "German-language_surnames"));
-            Origins.Add(new Origins("Italian", "Italian-language_surnames"));
-            Origins.Add(new Origins("Russian", "Russian-language_surnames"));
-            Origins.Add(new Origins("Jewish", "Jewish_surnames"));
-            Origins.Add(new Origins("English", "English-language_surnames"));
-            Origins.Add(new Origins("Serbian", "Serbian-language_surnames"));
-            Origins.Add(new Origins("Dutch", "Dutch-language_surnames"));
-            Origins.Add(new Origins("Dutch", "Surnames_of_Dutch_origin"));
-            Origins.Add(new Origins("Polish", "Polish-language_surnames"));
-            Origins.Add(new Origins("Turkish", "Turkish-language_surnames"));
-            Origins.Add(new Origins("Indian", "Indian_family_names"));
-            Origins.Add(new Origins("Arabic", "Arabic-language_surnames"));
-            Origins.Add(new Origins("Spanish", "Spanish-language_surnames"));
-            Origins.Add(new Origins("Romanian", "Romanian-language_surnames"));
-            Origins.Add(new Origins("Swedish", "Swedish-language_surnames"));
-            Origins.Add(new Origins("Irish", "Surnames_of_Irish_origin"));
-            Origins.Add(new Origins("Yiddish", "Yiddish-language_surnames"));
-            Origins.Add(new Origins("Croatian", "Croatian-language_surnames"));
-            Origins.Add(new Origins("Finnish", "Finnish-language_surnames"));
-            Origins.Add(new Origins("Czech", "Czech-language_surnames"));
+            Places.Add(new NameOrigin {
+                                    PlaceName = "Arabic",
+                                    Surnames = "Arabic-language_surnames",
+                                    U_Names = "Arabic_given_names",
+                                    F_Names = "Arabic_feminine_given_names",
+                                    M_Names = "Arabic_masculine_given_names"  });
 
-            Origins.OrderBy(x => x.DisplayName);
+            Places.Add(new NameOrigin
+            {
+                PlaceName = "English",
+                Surnames = "English-language_surnames|Surnames_of_English_origin|English_toponymic_surnames",
+                U_Names = "English_unisex_given_names|English_given_names",
+                F_Names = "English_feminine_given_names",
+                M_Names = "English_masculine_given_names"
+            });
 
-            RaisePropertyChanged("Origins");
+            Places.Add(new NameOrigin
+            {
+                PlaceName = "German",
+                Surnames = "German-language_surnames|Surnames_of_German_origin",
+                U_Names = "German_given_names",
+                F_Names = "German_feminine_given_names",
+                M_Names = "German_masculine_given_names"
+            });
+
+            Places.Add(new NameOrigin
+            {
+                PlaceName = "Hebrew",
+                Surnames = "Hebrew-language_surnames",
+                U_Names = "Hebrew_given_names",
+                F_Names = "Hebrew_feminine_given_names",
+                M_Names = "Hebrew_masculine_given_names"
+            });
+
+            Places.Add(new NameOrigin
+            {
+                PlaceName = "Indian",
+                Surnames = "Indian_family_names|Surnames_of_Indian_origin",
+                U_Names = "Indian_unisex_given_names|Indian_given_names",
+                F_Names = "Indian_feminine_given_names",
+                M_Names = "Indian_masculine_given_names"
+            });
+
+            Places.Add(new NameOrigin
+            {
+                PlaceName = "Italian",
+                Surnames = "Italian-language_surnames|Surnames_of_Italian_origin",
+                U_Names = "Italian_given_names",
+                F_Names = "Italian_feminine_given_names",
+                M_Names = "Italian_masculine_given_names"
+            });
+
+            Places.Add(new NameOrigin
+            {
+                PlaceName = "Japanese",
+                Surnames = "Japanese-language_surnames",
+                U_Names = "Japanese_unisex_given_names",
+                F_Names = "Japanese_feminine_given_names",
+                M_Names = "Japanese_masculine_given_names"
+            });
+
+            Places.Add(new NameOrigin
+            {
+                PlaceName = "Korean",
+                Surnames = "Korean-language_surnames",
+                U_Names = "Korean_unisex_given_names|Korean_given_names",
+                F_Names = "Korean_feminine_given_names",
+                M_Names = "Korean_masculine_given_names"
+            });
+
+            Places.Add(new NameOrigin
+            {
+                PlaceName = "Portuguese",
+                Surnames = "Portuguese-language_surnames",
+                U_Names = "Portuguese_given_names",
+                F_Names = "Portuguese_feminine_given_names",
+                M_Names = "Portuguese_masculine_given_names"
+            });
+
+            Places.Add(new NameOrigin
+            {
+                PlaceName = "Turkish",
+                Surnames = "Turkish-language_surnames",
+                U_Names = "Turkish_unisex_given_names|Turkish_given_names",
+                F_Names = "Turkish_feminine_given_names",
+                M_Names = "Turkish_masculine_given_names"
+            });
+
+
+            RaisePropertyChanged("Places");
         }
+
 
 
         private Dictionary<string, Dictionary<string, int>> GetFrequencies()
         {
             Dictionary<string, Dictionary<string, int>> frequencies = new Dictionary<string, Dictionary<string, int>>();
 
-            foreach (string n in Names)
+            foreach (string n in SourceNames)
             {
                 for (int i = 0; i < n.Length - Order; i++)
                 {
@@ -135,7 +239,7 @@ namespace NameGenerator
             Generated = new List<string>();
             Dictionary<string, int> firstChars = new Dictionary<string, int>();
 
-            foreach (string n in Names)
+            foreach (string n in SourceNames)
             {
                 string letter = n.Substring(0, 1);
                 if (!firstChars.ContainsKey(letter))
@@ -155,15 +259,14 @@ namespace NameGenerator
             //picks a starting string for each generated name
             for (int i = 0; i < OutputCount; i++)
             {
-                int randint = rnd.Next(0, Names.Count);
+                int randint = rnd.Next(0, SourceNames.Count);
 
                 foreach (string s in firstChars.Keys)
                 {
                     string name = "";
                     if (randint < firstChars[s])
                     {
-                        //string test = GenerateName(s);
-                        //string test = s;
+
                         for (int j = 0; j < Order; j++)
                         {
                             int total = 0;
@@ -194,7 +297,9 @@ namespace NameGenerator
                         }
 
                         //Generated.Add(test);
-                        Generated.Add(name);
+
+                            Generated.Add(name);
+                        
                         break;
                     }
                     randint -= firstChars[s];
@@ -210,7 +315,7 @@ namespace NameGenerator
 
 
                 //TODO: find a better way of continuing the name if currStr is not in the dictionary
-                while (currStr != "  " && frequencies.ContainsKey(currStr))
+                while (currStr != "  " && frequencies.ContainsKey(currStr) && name.Length < 50)
                 {
                     int total = 0;
                     foreach (var d in frequencies[currStr])
@@ -231,15 +336,14 @@ namespace NameGenerator
 
                     currStr = name.Substring(name.Length - Order);
                 }
-
-                Generated[i] = name.Trim();
+                if (!Generated.Contains(name.Trim()))
+                {
+                    Generated.Add(name);
             }
-
         }
 
-
-
-
+            Generated.Sort();
+        }
 
 
         public event PropertyChangedEventHandler PropertyChanged;
@@ -253,31 +357,6 @@ namespace NameGenerator
             }
         }
 
-    }
-
-    public class Origins: INotifyPropertyChanged
-    {
-        public string DisplayName { get; set; }
-        public string SearchName;
-        public bool IsChosen { get; set; }
-
-        public Origins(string display, string search)
-        {
-            DisplayName = display;
-            SearchName = search;
-            IsChosen = false;
-        }
-
-        public event PropertyChangedEventHandler PropertyChanged;
-
-        protected void RaisePropertyChanged(string name)
-        {
-            PropertyChangedEventHandler handler = PropertyChanged;
-            if (handler != null)
-            {
-                handler(this, new PropertyChangedEventArgs(name));
-            }
-        }
     }
 
 }
