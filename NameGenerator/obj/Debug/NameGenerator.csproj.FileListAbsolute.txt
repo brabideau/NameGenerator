@@ -1,0 +1,16 @@
+C:\Users\brian\Documents\GitHub\NameGenerator\NameGenerator\bin\Debug\NameGenerator.exe.config
+C:\Users\brian\Documents\GitHub\NameGenerator\NameGenerator\obj\Debug\NameGenerator.csprojResolveAssemblyReference.cache
+C:\Users\brian\Documents\GitHub\NameGenerator\NameGenerator\obj\Debug\MainWindow.g.cs
+C:\Users\brian\Documents\GitHub\NameGenerator\NameGenerator\obj\Debug\App.g.cs
+C:\Users\brian\Documents\GitHub\NameGenerator\NameGenerator\obj\Debug\NameGenerator_MarkupCompile.cache
+C:\Users\brian\Documents\GitHub\NameGenerator\NameGenerator\obj\Debug\NameGenerator_MarkupCompile.lref
+C:\Users\brian\Documents\GitHub\NameGenerator\NameGenerator\bin\Debug\NameGenerator.exe
+C:\Users\brian\Documents\GitHub\NameGenerator\NameGenerator\bin\Debug\NameGenerator.pdb
+C:\Users\brian\Documents\GitHub\NameGenerator\NameGenerator\bin\Debug\Newtonsoft.Json.dll
+C:\Users\brian\Documents\GitHub\NameGenerator\NameGenerator\bin\Debug\Newtonsoft.Json.xml
+C:\Users\brian\Documents\GitHub\NameGenerator\NameGenerator\obj\Debug\MainWindow.baml
+C:\Users\brian\Documents\GitHub\NameGenerator\NameGenerator\obj\Debug\NameGenerator.g.resources
+C:\Users\brian\Documents\GitHub\NameGenerator\NameGenerator\obj\Debug\NameGenerator.Properties.Resources.resources
+C:\Users\brian\Documents\GitHub\NameGenerator\NameGenerator\obj\Debug\NameGenerator.csproj.GenerateResource.Cache
+C:\Users\brian\Documents\GitHub\NameGenerator\NameGenerator\obj\Debug\NameGenerator.exe
+C:\Users\brian\Documents\GitHub\NameGenerator\NameGenerator\obj\Debug\NameGenerator.pdb
