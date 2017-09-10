@@ -1,0 +1,765 @@
+<Places>
+<NameOrigin>
+	<PlaceName>*Generic*</PlaceName>
+	<Surname></Surname>
+	<U_Names></U_Names>
+	<F_Names>Feminine_given_names</F_Names>
+	<M_Names>Masculine_given_names</M_Names>
+</NameOrigin>
+<NameOrigin>
+	<PlaceName>African</PlaceName>
+	<Surname>Surnames_of_African_origin</Surname>
+	<U_Names>African_given_names</U_Names>
+	<F_Names></F_Names>
+	<M_Names></M_Names>
+</NameOrigin>
+<NameOrigin>
+	<PlaceName>Afrikaans</PlaceName>
+	<Surname>Afrikaans-language_surnames</Surname>
+	<U_Names></U_Names>
+	<F_Names></F_Names>
+	<M_Names></M_Names>
+</NameOrigin>
+<NameOrigin>
+	<PlaceName>Akan</PlaceName>
+	<Surname>Surnames_of_Akan_origin</Surname>
+	<U_Names>Akan_given_names</U_Names>
+	<F_Names></F_Names>
+	<M_Names></M_Names>
+</NameOrigin>
+<NameOrigin>
+	<PlaceName>Albanian</PlaceName>
+	<Surname>Albanian-language_surnames</Surname>
+	<U_Names></U_Names>
+	<F_Names>Albanian_feminine_given_names</F_Names>
+	<M_Names>Albanian_masculine_given_names</M_Names>
+</NameOrigin>
+<NameOrigin>
+	<PlaceName>Algerian</PlaceName>
+	<Surname>Surnames_of_Algerian_origin</Surname>
+	<U_Names></U_Names>
+	<F_Names></F_Names>
+	<M_Names></M_Names>
+</NameOrigin>
+<NameOrigin>
+	<PlaceName>Americanized</PlaceName>
+	<Surname>Americanized_surnames</Surname>
+	<U_Names></U_Names>
+	<F_Names></F_Names>
+	<M_Names></M_Names>
+</NameOrigin>
+<NameOrigin>
+	<PlaceName>Amharic</PlaceName>
+	<Surname>Amharic-language_names</Surname>
+	<U_Names></U_Names>
+	<F_Names></F_Names>
+	<M_Names></M_Names>
+</NameOrigin>
+<NameOrigin>
+	<PlaceName>Ancient Egyptian</PlaceName>
+	<Surname></Surname>
+	<U_Names>Ancient_Egyptian_given_names</U_Names>
+	<F_Names></F_Names>
+	<M_Names></M_Names>
+</NameOrigin>
+<NameOrigin>
+	<PlaceName>Ancient Roman</PlaceName>
+	<Surname></Surname>
+	<U_Names>Ancient_Roman_praenomina</U_Names>
+	<F_Names></F_Names>
+	<M_Names></M_Names>
+</NameOrigin>
+<NameOrigin>
+	<PlaceName>Anglicised Irish</PlaceName>
+	<Surname>Anglicised_Irish-language_surnames</Surname>
+	<U_Names></U_Names>
+	<F_Names></F_Names>
+	<M_Names></M_Names>
+</NameOrigin>
+<NameOrigin>
+	<PlaceName>Anglicised Scottish Gaelic</PlaceName>
+	<Surname>Anglicised_Scottish_Gaelic-language_surnames</Surname>
+	<U_Names></U_Names>
+	<F_Names></F_Names>
+	<M_Names></M_Names>
+</NameOrigin>
+<NameOrigin>
+	<PlaceName>Anglicised Welsh</PlaceName>
+	<Surname>Anglicised_Welsh-language_surnames</Surname>
+	<U_Names></U_Names>
+	<F_Names></F_Names>
+	<M_Names></M_Names>
+</NameOrigin>
+<NameOrigin>
+	<PlaceName>Anglo-Saxon</PlaceName>
+	<Surname>Surnames_of_Anglo-Saxon_origin</Surname>
+	<U_Names></U_Names>
+	<F_Names></F_Names>
+	<M_Names></M_Names>
+</NameOrigin>
+<NameOrigin>
+	<PlaceName>Arabic</PlaceName>
+	<Surname>Arabic-language_surnames</Surname>
+	<U_Names>Arabic_given_names</U_Names>
+	<F_Names>Arabic_feminine_given_names</F_Names>
+	<M_Names>Arabic_masculine_given_names</M_Names>
+</NameOrigin>
+<NameOrigin>
+	<PlaceName>Armenian</PlaceName>
+	<Surname>Armenian-language_surnames</Surname>
+	<U_Names></U_Names>
+	<F_Names>Armenian_feminine_given_names</F_Names>
+	<M_Names>Armenian_masculine_given_names</M_Names>
+</NameOrigin>
+<NameOrigin>
+	<PlaceName>Ashanti</PlaceName>
+	<Surname>Surnames_of_Ashanti_origin</Surname>
+	<U_Names></U_Names>
+	<F_Names></F_Names>
+	<M_Names></M_Names>
+</NameOrigin>
+<NameOrigin>
+	<PlaceName>Asian</PlaceName>
+	<Surname>Surnames_of_Asian_origin</Surname>
+	<U_Names></U_Names>
+	<F_Names></F_Names>
+	<M_Names></M_Names>
+</NameOrigin>
+<NameOrigin>
+	<PlaceName>Assamese</PlaceName>
+	<Surname>Assamese-language_surnames</Surname>
+	<U_Names></U_Names>
+	<F_Names></F_Names>
+	<M_Names></M_Names>
+</NameOrigin>
+<NameOrigin>
+<PlaceName>Azerbaijani</PlaceName>
+	<Surname>Azerbaijani-language_surnames</Surname>
+	<U_Names></U_Names>
+	<F_Names></F_Names>
+	<M_Names></M_Names>
+</NameOrigin>
+<NameOrigin>
+	<PlaceName>Basque</PlaceName>
+	<Surname>Basque-language_surnames</Surname>
+	<U_Names></U_Names>
+	<F_Names></F_Names>
+	<M_Names>Basque_masculine_given_names</M_Names>
+</NameOrigin>
+<NameOrigin>
+	<PlaceName>Belarusian</PlaceName>
+	<Surname>Belarusian-language_surnames</Surname>
+	<U_Names></U_Names>
+	<F_Names></F_Names>
+	<M_Names>Belarusian_masculine_given_names</M_Names>
+</NameOrigin>
+<NameOrigin>
+	<PlaceName>Belgian</PlaceName>
+	<Surname>Surnames_of_Belgian_origin</Surname>
+	<U_Names></U_Names>
+	<F_Names></F_Names>
+	<M_Names></M_Names>
+</NameOrigin>
+<NameOrigin>
+	<PlaceName>Bengali</PlaceName>
+	<Surname>Bengali-language_surnames</Surname>
+	<U_Names></U_Names>
+	<F_Names></F_Names>
+	<M_Names></M_Names>
+</NameOrigin>
+<NameOrigin>
+	<PlaceName>Bengali Hindu</PlaceName>
+	<Surname>Bengali_Hindu_surnames</Surname>
+	<U_Names></U_Names>
+	<F_Names></F_Names>
+	<M_Names></M_Names>
+</NameOrigin>
+<NameOrigin>
+	<PlaceName>Bosniak</PlaceName>
+	<Surname></Surname>
+	<U_Names></U_Names>
+	<F_Names></F_Names>
+	<M_Names>Bosniak_masculine_given_names</M_Names>
+</NameOrigin>
+<NameOrigin>
+	<PlaceName>Bosnian</PlaceName>
+	<Surname>Bosnian-language_surnames</Surname>
+	<U_Names></U_Names>
+	<F_Names>Bosnian_feminine_given_names</F_Names>
+	<M_Names>Bosnian_masculine_given_names</M_Names>
+</NameOrigin>
+<NameOrigin>
+	<PlaceName>Breton</PlaceName>
+	<Surname>Breton-language_surnames</Surname>
+	<U_Names></U_Names>
+	<F_Names></F_Names>
+	<M_Names></M_Names>
+</NameOrigin>
+<NameOrigin>
+	<PlaceName>British Isles</PlaceName>
+	<Surname>Surnames_of_British_Isles_origin</Surname>
+	<U_Names></U_Names>
+	<F_Names></F_Names>
+	<M_Names></M_Names>
+</NameOrigin>
+<NameOrigin>
+	<PlaceName>Bulgarian</PlaceName>
+	<Surname>Bulgarian-language_surnames</Surname>
+	<U_Names></U_Names>
+	<F_Names>Bulgarian_feminine_given_names</F_Names>
+	<M_Names>Bulgarian_masculine_given_names</M_Names>
+</NameOrigin>
+<NameOrigin>
+	<PlaceName>Catalan</PlaceName>
+	<Surname>Catalan-language_surnames</Surname>
+	<U_Names></U_Names>
+	<F_Names></F_Names>
+	<M_Names></M_Names>
+</NameOrigin>
+<NameOrigin>
+	<PlaceName>Chinese</PlaceName>
+	<Surname>Chinese-language_surnames</Surname>
+	<U_Names>Chinese_given_names</U_Names>
+	<F_Names></F_Names>
+	<M_Names></M_Names>
+</NameOrigin>
+<NameOrigin>
+	<PlaceName>Circassian</PlaceName>
+	<Surname></Surname>
+	<U_Names></U_Names>
+	<F_Names>Circassian_feminine_given_names</F_Names>
+	<M_Names></M_Names>
+</NameOrigin>
+<NameOrigin>
+<PlaceName>Cornish</PlaceName>
+	<Surname>Cornish-language_surnames</Surname>
+	<U_Names></U_Names>
+	<F_Names></F_Names>
+	<M_Names></M_Names>
+</NameOrigin>
+<NameOrigin>
+<PlaceName>Croatian</PlaceName>
+	<Surname>Croatian-language_surnames</Surname>
+	<U_Names></U_Names>
+	<F_Names>Croatian_feminine_given_names</F_Names>
+	<M_Names>Croatian_masculine_given_names</M_Names>
+</NameOrigin>
+<NameOrigin>
+	<PlaceName>Czech</PlaceName>
+	<Surname>Czech-language_surnames</Surname>
+	<U_Names></U_Names>
+	<F_Names>Czech_feminine_given_names</F_Names>
+	<M_Names>Czech_masculine_given_names</M_Names>
+</NameOrigin>
+<NameOrigin>
+	<PlaceName>Danish</PlaceName>
+	<Surname>Danish-language_surnames</Surname>
+	<U_Names></U_Names>
+	<F_Names>Danish_feminine_given_names</F_Names>
+	<M_Names>Danish_masculine_given_names</M_Names>
+</NameOrigin>
+<NameOrigin>
+<PlaceName>Dutch</PlaceName>
+	<Surname>Dutch-language_surnames</Surname>
+	<U_Names></U_Names>
+	<F_Names>Dutch_feminine_given_names</F_Names>
+	<M_Names>Dutch_masculine_given_names</M_Names>
+</NameOrigin>
+<NameOrigin>
+	<PlaceName>English</PlaceName>
+	<Surname>English-language_surnames</Surname>
+	<U_Names>English-language_unisex_given_names</U_Names>
+	<F_Names>English-language_feminine_given_names</F_Names>
+	<M_Names>English_masculine_given_names</M_Names>
+</NameOrigin>
+<NameOrigin>
+	<PlaceName>Estonian</PlaceName>
+	<Surname>Estonian-language_surnames</Surname>
+	<U_Names></U_Names>
+	<F_Names>Estonian_feminine_given_names</F_Names>
+	<M_Names>Estonian_masculine_given_names</M_Names>
+</NameOrigin>
+<NameOrigin>
+	<PlaceName>Ethiopian</PlaceName>
+	<Surname></Surname>
+	<U_Names>Ethiopian_given_names</U_Names>
+	<F_Names></F_Names>
+	<M_Names></M_Names>
+</NameOrigin>
+<NameOrigin>
+	<PlaceName>European</PlaceName>
+	<Surname></Surname>
+	<U_Names></U_Names>
+	<F_Names>European_feminine_given_names</F_Names>
+	<M_Names></M_Names>
+</NameOrigin>
+<NameOrigin>
+	<PlaceName>Faroese</PlaceName>
+	<Surname></Surname>
+	<U_Names></U_Names>
+	<F_Names></F_Names>
+	<M_Names>Faroese_masculine_given_names</M_Names>
+</NameOrigin>
+<NameOrigin>
+	<PlaceName>Finnish</PlaceName>
+	<Surname>Finnish-language_surnames</Surname>
+	<U_Names></U_Names>
+	<F_Names>Finnish_feminine_given_names</F_Names>
+	<M_Names>Finnish_masculine_given_names</M_Names>
+</NameOrigin>
+<NameOrigin>
+	<PlaceName>French</PlaceName>
+	<Surname>French-language_surnames|Surnames_of_French_origin</Surname>
+	<U_Names></U_Names>
+	<F_Names>French_feminine_given_names</F_Names>
+	<M_Names>French_masculine_given_names</M_Names>
+</NameOrigin>
+<NameOrigin>
+	<PlaceName>Frisian</PlaceName>
+	<Surname>Surnames_of_Frisian_origin</Surname>
+	<U_Names></U_Names>
+	<F_Names></F_Names>
+	<M_Names></M_Names>
+</NameOrigin>
+<NameOrigin>
+	<PlaceName>Galician</PlaceName>
+	<Surname>Galician-language_surnames</Surname>
+	<U_Names></U_Names>
+	<F_Names></F_Names>
+	<M_Names></M_Names>
+</NameOrigin>
+<NameOrigin>
+	<PlaceName>Georgian</PlaceName>
+	<Surname>Georgian-language_surnames</Surname>
+	<U_Names></U_Names>
+	<F_Names></F_Names>
+	<M_Names>Georgian_masculine_given_names</M_Names>
+</NameOrigin>
+<NameOrigin>
+	<PlaceName>German</PlaceName>
+	<Surname>German-language_surnames</Surname>
+	<U_Names>German_given_names</U_Names>
+	<F_Names>German_feminine_given_names</F_Names>
+	<M_Names>German_masculine_given_names</M_Names>
+</NameOrigin>
+<NameOrigin>
+	<PlaceName>Germanic</PlaceName>
+	<Surname>Germanic-language_surnames</Surname>
+	<U_Names>Germanic_given_names</U_Names>
+	<F_Names></F_Names>
+	<M_Names></M_Names>
+</NameOrigin>
+<NameOrigin>
+	<PlaceName>Greek</PlaceName>
+	<Surname>Greek-language_surnames</Surname>
+	<U_Names></U_Names>
+	<F_Names>Greek_feminine_given_names</F_Names>
+	<M_Names>Greek_masculine_given_names</M_Names>
+</NameOrigin>
+<NameOrigin>
+	<PlaceName>Gujarati</PlaceName>
+	<Surname>Gujarati-language_surnames</Surname>
+	<U_Names></U_Names>
+	<F_Names></F_Names>
+	<M_Names></M_Names>
+</NameOrigin>
+<NameOrigin>
+	<PlaceName>Hebrew</PlaceName>
+	<Surname>Hebrew-language_surnames</Surname>
+	<U_Names>Hebrew_given_names</U_Names>
+	<F_Names>Hebrew_feminine_given_names</F_Names>
+	<M_Names>Hebrew_masculine_given_names</M_Names>
+</NameOrigin>
+<NameOrigin>
+	<PlaceName>Hindu</PlaceName>
+	<Surname>Hindu_surnames</Surname>
+	<U_Names>Hindu_given_names</U_Names>
+	<F_Names></F_Names>
+	<M_Names></M_Names>
+</NameOrigin>
+<NameOrigin>
+	<PlaceName>Hungarian</PlaceName>
+	<Surname>Hungarian-language_surnames</Surname>
+	<U_Names></U_Names>
+	<F_Names>Hungarian_feminine_given_names</F_Names>
+	<M_Names>Hungarian_masculine_given_names</M_Names>
+</NameOrigin>
+<NameOrigin>
+	<PlaceName>Icelandic</PlaceName>
+	<Surname>Icelandic-language_surnames</Surname>
+	<U_Names></U_Names>
+	<F_Names>Icelandic_feminine_given_names</F_Names>
+	<M_Names>Icelandic_masculine_given_names</M_Names>
+</NameOrigin>
+<NameOrigin>
+	<PlaceName>Indian</PlaceName>
+	<Surname>Indian_family_names</Surname>
+	<U_Names>Indian_unisex_given_names</U_Names>
+	<F_Names>Indian_feminine_given_names</F_Names>
+	<M_Names>Indian_masculine_given_names</M_Names>
+</NameOrigin>
+<NameOrigin>
+	<PlaceName>Iranian</PlaceName>
+	<Surname>Iranian-language_surnames</Surname>
+	<U_Names></U_Names>
+	<F_Names>Iranian_feminine_given_names</F_Names>
+	<M_Names>Iranian_masculine_given_names</M_Names>
+</NameOrigin>
+<NameOrigin>
+	<PlaceName>Irish</PlaceName>
+	<Surname>Irish-language_surnames</Surname>
+	<U_Names></U_Names>
+	<F_Names>Irish-language_feminine_given_names</F_Names>
+	<M_Names>Irish-language_masculine_given_names</M_Names>
+</NameOrigin>
+<NameOrigin>
+	<PlaceName>Italian</PlaceName>
+	<Surname>Italian-language_surnames</Surname>
+	<U_Names>Italian_given_names</U_Names>
+	<F_Names>Italian_feminine_given_names</F_Names>
+	<M_Names>Italian_masculine_given_names</M_Names>
+</NameOrigin>
+<NameOrigin>
+	<PlaceName>Japanese</PlaceName>
+	<Surname>Japanese-language_surnames</Surname>
+	<U_Names>Japanese_unisex_given_names</U_Names>
+	<F_Names>Japanese_feminine_given_names</F_Names>
+	<M_Names>Japanese_masculine_given_names</M_Names>
+</NameOrigin>
+<NameOrigin>
+	<PlaceName>Jewish</PlaceName>
+	<Surname>Jewish_surnames</Surname>
+	<U_Names>Jewish_given_names</U_Names>
+	<F_Names></F_Names>
+	<M_Names></M_Names>
+</NameOrigin>
+<NameOrigin>
+	<PlaceName>Kohenitic</PlaceName>
+	<Surname>Kohenitic_surnames</Surname>
+	<U_Names></U_Names>
+	<F_Names></F_Names>
+	<M_Names></M_Names>
+</NameOrigin>
+<NameOrigin>
+	<PlaceName>Korean</PlaceName>
+	<Surname>Korean-language_surnames</Surname>
+	<U_Names>Korean_unisex_given_names</U_Names>
+	<F_Names>Korean_feminine_given_names</F_Names>
+	<M_Names>Korean_masculine_given_names</M_Names>
+</NameOrigin>
+<NameOrigin>
+	<PlaceName>Latin</PlaceName>
+	<Surname>Latin-language_surnames</Surname>
+	<U_Names></U_Names>
+	<F_Names>Latin_feminine_given_names</F_Names>
+	<M_Names>Latin_masculine_given_names</M_Names>
+</NameOrigin>
+<NameOrigin>
+	<PlaceName>Latvian</PlaceName>
+	<Surname>Latvian-language_surnames</Surname>
+	<U_Names></U_Names>
+	<F_Names>Latvian_feminine_given_names</F_Names>
+	<M_Names>Latvian_masculine_given_names</M_Names>
+</NameOrigin>
+<NameOrigin>
+	<PlaceName>Levitic</PlaceName>
+	<Surname>Levitic_surnames</Surname>
+	<U_Names></U_Names>
+	<F_Names></F_Names>
+	<M_Names></M_Names>
+</NameOrigin>
+<NameOrigin>
+	<PlaceName>Lithuanian</PlaceName>
+	<Surname>Lithuanian-language_surnames</Surname>
+	<U_Names></U_Names>
+	<F_Names>Lithuanian_feminine_given_names</F_Names>
+	<M_Names>Lithuanian_masculine_given_names</M_Names>
+</NameOrigin>
+<NameOrigin>
+<PlaceName>Low German</PlaceName>
+	<Surname>Low_German_surnames</Surname>
+	<U_Names></U_Names>
+	<F_Names></F_Names>
+	<M_Names></M_Names>
+</NameOrigin>
+<NameOrigin>
+<PlaceName>Lowland Scottish</PlaceName>
+	<Surname>Surnames_of_Lowland_Scottish_origin</Surname>
+	<U_Names></U_Names>
+	<F_Names></F_Names>
+	<M_Names></M_Names>
+</NameOrigin>
+<NameOrigin>
+<PlaceName>Macedonian</PlaceName>
+	<Surname>Macedonian-language_surnames</Surname>
+	<U_Names></U_Names>
+	<F_Names>Macedonian_feminine_given_names</F_Names>
+	<M_Names>Macedonian_masculine_given_names</M_Names>
+</NameOrigin>
+<NameOrigin>
+<PlaceName>Moldovan</PlaceName>
+	<Surname>Surnames_of_Moldovan_origin</Surname>
+	<U_Names></U_Names>
+	<F_Names></F_Names>
+	<M_Names></M_Names>
+</NameOrigin>
+<NameOrigin>
+	<PlaceName>Montenegrin</PlaceName>
+	<Surname>Montenegrin-language_surnames</Surname>
+	<U_Names></U_Names>
+	<F_Names></F_Names>
+	<M_Names>Montenegrin_masculine_given_names</M_Names>
+</NameOrigin>
+<NameOrigin>
+	<PlaceName>Nepalese</PlaceName>
+	<Surname>Surnames_of_Nepalese_origin</Surname>
+	<U_Names></U_Names>
+	<F_Names></F_Names>
+	<M_Names></M_Names>
+</NameOrigin>
+<NameOrigin>
+	<PlaceName>Nepali</PlaceName>
+	<Surname>Nepali-language_surnames</Surname>
+	<U_Names></U_Names>
+	<F_Names></F_Names>
+	<M_Names></M_Names>
+</NameOrigin>
+<NameOrigin>
+	<PlaceName>Norman</PlaceName>
+	<Surname>Norman-language_surnames</Surname>
+	<U_Names></U_Names>
+	<F_Names></F_Names>
+	<M_Names></M_Names>
+</NameOrigin>
+<NameOrigin>
+	<PlaceName>Norwegian</PlaceName>
+	<Surname>Norwegian-language_surnames</Surname>
+	<U_Names></U_Names>
+	<F_Names>Norwegian_feminine_given_names</F_Names>
+	<M_Names>Norwegian_masculine_given_names</M_Names>
+</NameOrigin>
+<NameOrigin>
+	<PlaceName>Occitan</PlaceName>
+	<Surname>Occitan-language_surnames</Surname>
+	<U_Names></U_Names>
+	<F_Names></F_Names>
+	<M_Names></M_Names>
+</NameOrigin>
+<NameOrigin>
+	<PlaceName>Pashto</PlaceName>
+	<Surname>Pashto-language_surnames</Surname>
+	<U_Names></U_Names>
+	<F_Names></F_Names>
+	<M_Names></M_Names>
+</NameOrigin>
+<NameOrigin>
+	<PlaceName>Persian</PlaceName>
+	<Surname>Persian-language_surnames</Surname>
+	<U_Names></U_Names>
+	<F_Names>Persian_feminine_given_names</F_Names>
+	<M_Names>Persian_masculine_given_names</M_Names>
+</NameOrigin>
+<NameOrigin>
+	<PlaceName>Polish</PlaceName>
+	<Surname>Polish-language_surnames</Surname>
+	<U_Names></U_Names>
+	<F_Names>Polish_feminine_given_names</F_Names>
+	<M_Names>Polish_masculine_given_names</M_Names>
+</NameOrigin>
+<NameOrigin>
+	<PlaceName>Portuguese</PlaceName>
+	<Surname>Portuguese-language_surnames</Surname>
+	<U_Names>Portuguese_given_names</U_Names>
+	<F_Names>Portuguese_feminine_given_names</F_Names>
+	<M_Names>Portuguese_masculine_given_names</M_Names>
+</NameOrigin>
+<NameOrigin>
+	<PlaceName>Punjabi</PlaceName>
+	<Surname>Punjabi-language_surnames</Surname>
+	<U_Names></U_Names>
+	<F_Names></F_Names>
+	<M_Names></M_Names>
+</NameOrigin>
+<NameOrigin>
+	<PlaceName>Romanian</PlaceName>
+	<Surname>Romanian-language_surnames</Surname>
+	<U_Names></U_Names>
+	<F_Names>Romanian_feminine_given_names</F_Names>
+	<M_Names>Romanian_masculine_given_names</M_Names>
+</NameOrigin>
+<NameOrigin>
+	<PlaceName>Russian</PlaceName>
+	<Surname>Russian-language_surnames</Surname>
+	<U_Names></U_Names>
+	<F_Names>Russian_feminine_given_names</F_Names>
+	<M_Names>Russian_masculine_given_names</M_Names>
+</NameOrigin>
+<NameOrigin>
+	<PlaceName>Scottish</PlaceName>
+	<Surname>Scottish_surnames</Surname>
+	<U_Names></U_Names>
+	<F_Names>Scottish_feminine_given_names</F_Names>
+	<M_Names>Scottish_masculine_given_names</M_Names>
+</NameOrigin>
+<NameOrigin>
+	<PlaceName>Scottish Gaelic</PlaceName>
+	<Surname>Scottish_Gaelic-language_surnames</Surname>
+	<U_Names></U_Names>
+	<F_Names></F_Names>
+	<M_Names>Scottish_Gaelic_masculine_given_names</M_Names>
+</NameOrigin>
+<NameOrigin>
+	<PlaceName>Sephardic</PlaceName>
+	<Surname>Sephardic_surnames</Surname>
+	<U_Names></U_Names>
+	<F_Names></F_Names>
+	<M_Names></M_Names>
+</NameOrigin>
+<NameOrigin>
+	<PlaceName>Serbian</PlaceName>
+	<Surname>Serbian-language_surnames</Surname>
+	<U_Names></U_Names>
+	<F_Names>Serbian_feminine_given_names</F_Names>
+	<M_Names>Serbian_masculine_given_names</M_Names>
+</NameOrigin>
+<NameOrigin>
+	<PlaceName>Serer</PlaceName>
+	<Surname>Serer_surnames</Surname>
+	<U_Names></U_Names>
+	<F_Names></F_Names>
+	<M_Names></M_Names>
+</NameOrigin>
+<NameOrigin>
+	<PlaceName>Silesian</PlaceName>
+	<Surname>Surnames_of_Silesian_origin</Surname>
+	<U_Names></U_Names>
+	<F_Names></F_Names>
+	<M_Names></M_Names>
+</NameOrigin>
+<NameOrigin>
+	<PlaceName>Sindhi</PlaceName>
+	<Surname>Sindhi-language_surnames</Surname>
+	<U_Names></U_Names>
+	<F_Names></F_Names>
+	<M_Names></M_Names>
+</NameOrigin>
+<NameOrigin>
+	<PlaceName>Sinhalese</PlaceName>
+	<Surname>Sinhalese_surnames</Surname>
+	<U_Names></U_Names>
+	<F_Names></F_Names>
+	<M_Names>Sinhalese_masculine_given_names</M_Names>
+</NameOrigin>
+<NameOrigin>
+	<PlaceName>Slavic</PlaceName>
+	<Surname>Slavic-language_surnames</Surname>
+	<U_Names></U_Names>
+	<F_Names>Slavic_feminine_given_names</F_Names>
+	<M_Names>Slavic_masculine_given_names</M_Names>
+</NameOrigin>
+<NameOrigin>
+	<PlaceName>Slovak</PlaceName>
+	<Surname>Slovak-language_surnames</Surname>
+	<U_Names></U_Names>
+	<F_Names>Slovak_feminine_given_names</F_Names>
+	<M_Names>Slovak_masculine_given_names</M_Names>
+	</NameOrigin>
+<NameOrigin>
+	<PlaceName>Slovene</PlaceName>
+	<Surname>Slovene-language_surnames</Surname>
+	<U_Names></U_Names>
+	<F_Names>Slovene_feminine_given_names</F_Names>
+	<M_Names>Slovene_masculine_given_names</M_Names>
+</NameOrigin>
+<NameOrigin>
+	<PlaceName>Spanish</PlaceName>
+	<Surname>Spanish-language_surnames</Surname>
+	<U_Names></U_Names>
+	<F_Names>Spanish_feminine_given_names</F_Names>
+	<M_Names>Spanish_masculine_given_names</M_Names>
+</NameOrigin>
+<NameOrigin>
+	<PlaceName>Swedish</PlaceName>
+	<Surname>Swedish-language_surnames</Surname>
+	<U_Names></U_Names>
+	<F_Names>Swedish_feminine_given_names</F_Names>
+	<M_Names>Swedish_masculine_given_names</M_Names>
+</NameOrigin>
+<NameOrigin>
+	<PlaceName>Swiss-German</PlaceName>
+	<Surname>Swiss-German_surnames</Surname>
+	<U_Names></U_Names>
+	<F_Names></F_Names>
+	<M_Names></M_Names>
+</NameOrigin>
+	<NameOrigin>
+	<PlaceName>Tatar</PlaceName>
+	<Surname>Tatar-language_surnames</Surname>
+	<U_Names></U_Names>
+	<F_Names></F_Names>
+	<M_Names></M_Names>
+</NameOrigin>
+<NameOrigin>
+	<PlaceName>Turkic</PlaceName>
+	<Surname>Turkic-language_surnames</Surname>
+	<U_Names></U_Names>
+	<F_Names></F_Names>
+	<M_Names></M_Names>
+</NameOrigin>
+<NameOrigin>
+	<PlaceName>Turkish</PlaceName>
+	<Surname>Turkish-language_surnames</Surname>
+	<U_Names>Turkish_unisex_given_names</U_Names>
+	<F_Names>Turkish_feminine_given_names</F_Names>
+	<M_Names>Turkish_masculine_given_names</M_Names>
+</NameOrigin>
+<NameOrigin>
+	<PlaceName>Ukrainian</PlaceName>
+	<Surname>Ukrainian-language_surnames</Surname>
+	<U_Names></U_Names>
+	<F_Names>Ukrainian_feminine_given_names</F_Names>
+	<M_Names>Ukrainian_masculine_given_names</M_Names>
+</NameOrigin>
+<NameOrigin>
+	<PlaceName>Ulster-Scottish</PlaceName>
+	<Surname>Surnames_of_Ulster-Scottish_origin</Surname>
+	<U_Names></U_Names>
+	<F_Names></F_Names>
+	<M_Names></M_Names>
+</NameOrigin>
+<NameOrigin>
+	<PlaceName>Urdu</PlaceName>
+	<Surname>Urdu-language_surnames</Surname>
+	<U_Names></U_Names>
+	<F_Names></F_Names>
+	<M_Names></M_Names>
+</NameOrigin>
+<NameOrigin>
+	<PlaceName>Vietnamese</PlaceName>
+	<Surname>Vietnamese-language_surnames</Surname>
+	<U_Names></U_Names>
+	<F_Names></F_Names>
+	<M_Names></M_Names>
+</NameOrigin>
+<NameOrigin>
+	<PlaceName>Welsh</PlaceName>
+	<Surname>Surnames_of_Welsh_origin</Surname>
+	<U_Names></U_Names>
+	<F_Names>Welsh_feminine_given_names</F_Names>
+	<M_Names>Welsh_masculine_given_names</M_Names>
+</NameOrigin>
+<NameOrigin>
+	<PlaceName>Yiddish</PlaceName>
+	<Surname>Yiddish-language_surnames</Surname>
+	<U_Names></U_Names>
+	<F_Names></F_Names>
+	<M_Names></M_Names>
+</NameOrigin>
+<NameOrigin>
+	<PlaceName>Yoruba</PlaceName>
+	<Surname>Yoruba-language_surnames</Surname>
+	<U_Names>Yoruba_given_names</U_Names>
+	<F_Names></F_Names>
+	<M_Names></M_Names>
+</NameOrigin>
+</Places>

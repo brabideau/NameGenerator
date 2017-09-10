@@ -29,4 +29,18 @@ namespace NameGenerator
         }
 
     }
+
+
+    public class NameOriginInfo
+    {
+        public string PlaceName { get; set; }
+        public int SurnameCount { get; set; }
+
+        public int U_NamesCount { get; set; }
+        public int F_NamesCount { get; set; }
+        public int M_NamesCount { get; set; }
+
+        public int TotalCount { get { return SurnameCount + U_NamesCount + F_NamesCount + M_NamesCount; } }
+
+    }
 }

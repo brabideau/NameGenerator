@@ -5,47 +5,83 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:NameGenerator"
         mc:Ignorable="d"
-        Title="MainWindow" Height="700" Width="525">
+        Title="MainWindow" Height="750" Width="600">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
-            <RowDefinition Height="Auto"/>
-            <RowDefinition Height="Auto"/>
             <RowDefinition Height="*"/>
-            <!--<RowDefinition Height="*"/>-->
+            <RowDefinition Height="Auto"/>
         </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="2*"/>
+            <ColumnDefinition Width="3*"/>
+        </Grid.ColumnDefinitions>
 
         <StackPanel Grid.Row="0" Orientation="Vertical">
             <StackPanel Orientation="Horizontal">
                 <TextBlock Text="How many?"/>
-                <TextBox Text="{Binding OutputCount}"/>
+                <TextBox Text="{Binding OutputCount, Mode=TwoWay, UpdateSourceTrigger=LostFocus}"/>
             </StackPanel>
 
-            <ComboBox ItemsSource="{Binding Genders}" SelectedValue="{Binding ChosenGender}"/>
+            <ComboBox ItemsSource="{Binding Genders}" SelectedValue="{Binding ChosenGender, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
 
-            <ComboBox ItemsSource="{Binding NameTypes}" SelectedValue="{Binding ChosenNameType}"/>
-
+            <ComboBox ItemsSource="{Binding NameTypes}" SelectedValue="{Binding ChosenNameType, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
 
         </StackPanel>
-        <HeaderedContentControl Grid.Row="1" Header="Name Origins:">
-            <ScrollViewer>
-                <ListBox ItemsSource="{Binding Places}" >
-                    <ListBox.ItemTemplate>
-                        <DataTemplate>
-                            <CheckBox Content="{Binding PlaceName}" IsChecked="{Binding IsChecked}"/>
-                        </DataTemplate>
-                    </ListBox.ItemTemplate>
-                </ListBox>
-            </ScrollViewer>
-        </HeaderedContentControl>
+        
+        <ListBox Grid.Row="1" ItemsSource="{Binding Places}" >
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <CheckBox Content="{Binding PlaceName}" IsChecked="{Binding IsChecked}"/>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
         
 
-        <Button Grid.Row="2" Click="Generate_Click">Get Names</Button>
+        <Button Grid.Row="2" Click="Generate_Click" VerticalAlignment="Top">Get Names</Button>
         
-        <!--<HeaderedContentControl Grid.Row="3" Header="Your names:" VerticalAlignment="Stretch">-->
-            <ListView ItemsSource="{Binding Generated}"/>
-        <!--</HeaderedContentControl>-->
+        <ListView Grid.Column="1" Grid.RowSpan="3" ItemsSource="{Binding Generated}"/>
 
 
+        <!--<DataGrid Name="theGrid" ItemsSource="{Binding MetaInfo}">
+            <DataGridTemplateColumn>
+                <DataGridTemplateColumn.CellTemplate>
+                    <DataTemplate>
+                        <Expander>
+                            <Expander.Header>
+                                <StackPanel Orientation="Horizontal">
+                                    <Label Content="{Binding PlaceName}"></Label>
+                                    <Label Content="{Binding TotalCount}" HorizontalAlignment="Right"/>
+                                </StackPanel>                                
+                            </Expander.Header>
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="*"/>
+                                </Grid.ColumnDefinitions>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="Auto"/>
+                                    <RowDefinition Height="Auto"/>
+                                    <RowDefinition Height="Auto"/>
+                                    <RowDefinition Height="Auto"/>
+                                </Grid.RowDefinitions>
+                                <Label Grid.Column="0" Grid.Row="0">Surnames</Label>
+                                <Label Grid.Column="1" Grid.Row="0" Content="{Binding SurnameCount}"/>
+
+                                <Label Grid.Column="0" Grid.Row="0">Unisex</Label>
+                                <Label Grid.Column="1" Grid.Row="0" Content="{Binding U_NamesCount}"/>
+
+                                <Label Grid.Column="0" Grid.Row="0">Female</Label>
+                                <Label Grid.Column="1" Grid.Row="0" Content="{Binding F_NamesCount}"/>
+
+                                <Label Grid.Column="0" Grid.Row="0">Male</Label>
+                                <Label Grid.Column="1" Grid.Row="0" Content="{Binding M_NamesCount}"/>
+                            </Grid>
+                        </Expander>
+                    </DataTemplate>
+                </DataGridTemplateColumn.CellTemplate>
+            </DataGridTemplateColumn>
+            --><!--<DataGridTextColumn Header="Place" Binding="{Binding PlaceName}"/>--><!--
+        </DataGrid>-->
     </Grid>
 </Window>
