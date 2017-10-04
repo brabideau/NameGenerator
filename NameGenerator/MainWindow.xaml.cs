@@ -55,7 +55,7 @@ namespace NameGenerator
         {
             InitializeComponent();
             DataContext = this;
-        
+
             Order = 3;
             OutputCount = 20;
             Places = new List<NameOrigin>();
@@ -75,33 +75,11 @@ namespace NameGenerator
 
             FillPlaces();
 
-            /*--------------------*/
-
-            //List<NameOriginInfo> MetaInfo = new List<NameOriginInfo>();
-
-            //foreach (NameOrigin n in Places)
-            //{
-            //    NameOriginInfo myMeta = new NameOriginInfo();
-            //    myMeta.PlaceName = n.PlaceName;
-            //    myMeta.SurnameCount = String.IsNullOrEmpty(n.Surnames) ? 0 :GetCount(n.Surnames);
-            //    myMeta.U_NamesCount = String.IsNullOrEmpty(n.U_Names) ? 0 :GetCount(n.U_Names);
-            //    myMeta.F_NamesCount = String.IsNullOrEmpty(n.F_Names) ? 0 :GetCount(n.F_Names);
-            //    myMeta.M_NamesCount = String.IsNullOrEmpty(n.M_Names) ? 0 :GetCount(n.M_Names);
-
-            //    MetaInfo.Add(myMeta);
-            //}
-
-
-            //RaisePropertyChanged("MetaInfo");
-            //theGrid.DataContext = MetaInfo;
-
-            /*--------------------*/
-
         }
+
 
         private int GetCount(string source)
         {
-
             if (string.IsNullOrEmpty(source))
             {
                 return 0;
@@ -124,7 +102,6 @@ namespace NameGenerator
                     listOfNames.Add((((string)name["title"]).Split('(')[0]).Trim());
                 }
             }
-
 
             while (result["batchcomplete"] == null)
             {
@@ -152,44 +129,47 @@ namespace NameGenerator
             listOfNames.RemoveAll(n => n.Length <= 1);
 
             return listOfNames.Count();
-            
 
         }
 
 
-        
         private void Generate_Click(object sender, RoutedEventArgs e)
         {
+            List<NameOrigin> sourcePlaces = new List<NameOrigin>();
+            sourcePlaces = Places.Where(p => p.IsChecked);
+
             List<string> totalSources = new List<string>();
 
             switch (ChosenNameType)
             {
                 case NameType.Given:
                     totalSources = GetGenderedNames(totalSources);
+                    Generated = GenerateList();
                     break;
 
                 case NameType.Surname:
-                    totalSources = Places.Where(p => p.IsChecked).Select(p => p.Surnames).ToList();
+                    totalSources = sourcePlaces.Select(p => p.Surnames).ToList();
+                    Generated = GenerateList();
                     break;
 
                 case NameType.Both:
-                    totalSources = Places.Where(p => p.IsChecked).Select(p => p.Surnames).ToList();
+                    totalSources = sourcePlaces.Select(p => p.Surnames).ToList();
+                    _genSurnames = GenerateList();
                     totalSources = GetGenderedNames(totalSources);
+                    _genGiven = GenerateList();
+                    Generated = new List<string>();
+
+                    for(int i = 0; i < OutputCount; i++)
+                    {
+                        Generated.Add(String.Format("{0} {1}", _genGiven[i], _genSurnames[i]));
+                    }
+
                     break;
             }
 
+            //totalSources.RemoveAll(s => string.IsNullOrEmpty(s));
 
-            totalSources.RemoveAll(s => string.IsNullOrEmpty(s));
-
-
-            if(totalSources.Count > 0)
-            {
-                FillSources(totalSources);
-
-                GenerateList();
-                RaisePropertyChanged("Generated");
-            }
-
+            RaisePropertyChanged("Generated");
         }
 
 
@@ -218,6 +198,7 @@ namespace NameGenerator
             return totalSources;
         }
 
+
         private void FillSources(List<string> totalSources)
         {
             _sourceNames = new List<string>();
@@ -240,21 +221,27 @@ namespace NameGenerator
                     }
                 }
 
+                bool isComplete = false;
 
-                while (result["batchcomplete"] == null)
+                while (!isComplete)
                 {
-                    string continuequery = string.Format(query + "&gcmcontinue= {0}", result["continue"]["gcmcontinue"]);
-                    rawlist = result["query"]["pages"];
-
-                    foreach (var page in rawlist)
+                    try
                     {
-                        foreach (var name in page)
+                        string continuequery = string.Format(query + "&gcmcontinue= {0}", result["continue"]["gcmcontinue"]);
+                        rawlist = result["query"]["pages"];
+
+                        foreach (var page in rawlist)
                         {
-                            _sourceNames.Add((((string)name["title"]).Split('(')[0]).Trim());
+                            foreach (var name in page)
+                            {
+                                _sourceNames.Add((((string)name["title"]).Split('(')[0]).Trim());
+                            }
                         }
                     }
+                    catch { isComplete = true; }
                 }
             }
+
             _sourceNames.RemoveAll(n => n.ToUpper().Contains("LIST OF"));
             _sourceNames.RemoveAll(n => n.ToUpper().Contains("SURNAME"));
             _sourceNames.RemoveAll(n => n.ToUpper().Contains("FAMILY"));
@@ -266,6 +253,7 @@ namespace NameGenerator
             _sourceNames.RemoveAll(n => n.ToUpper().Contains("CLAN"));
             _sourceNames.RemoveAll(n => n.Length <= 1);
         }
+
 
         private void FillPlaces()
         {
@@ -308,16 +296,16 @@ namespace NameGenerator
         }
 
 
-        private void GenerateList()
+        private List<string> GenerateList()
         {
             Order = 3;
-            Generated = new List<string>();
+            List<string> output = new List<string>();
             _firstChars = new Dictionary<string, int>();
 
             _minLength = _sourceNames.Min(n => n.Length);
             _maxLength = _sourceNames.Max(n => n.Length);
 
-            if(Order <= _minLength) { Order = _minLength; }
+            if (Order <= _minLength) { Order = _minLength; }
 
             foreach (string n in _sourceNames)
             {
@@ -337,13 +325,15 @@ namespace NameGenerator
             _random = new Random();
 
             int attempts = 0;
-            while(Generated.Count < OutputCount && attempts < OutputCount * 5)
+            while (output.Count < OutputCount && attempts < OutputCount * 5)
             {
                 GenerateName();
                 attempts++;
             }
 
-            Generated.Sort();
+            output.Sort();
+
+            return output;
         }
 
 
@@ -388,8 +378,6 @@ namespace NameGenerator
                 }
                 randint -= _firstChars[s];
             }
-            
-
 
             //the rest of the name?
 
@@ -416,8 +404,8 @@ namespace NameGenerator
                 currStr = name.Substring(name.Length - Order);
             }
 
-            if(name.Length > _minLength && !Generated.Contains(name)) { Generated.Add(name); }
-            
+            if (name.Length > _minLength && !Generated.Contains(name)) { Generated.Add(name); }
+
         }
 
 
@@ -433,5 +421,4 @@ namespace NameGenerator
         }
 
     }
-
 }
