@@ -136,7 +136,7 @@ namespace NameGenerator
         private void Generate_Click(object sender, RoutedEventArgs e)
         {
             List<NameOrigin> sourcePlaces = new List<NameOrigin>();
-            sourcePlaces = Places.Where(p => p.IsChecked);
+            sourcePlaces = Places.Where(p => p.IsChecked).ToList();
 
             List<string> totalSources = new List<string>();
 
